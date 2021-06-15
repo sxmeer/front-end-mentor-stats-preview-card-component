@@ -1,0 +1,83 @@
+@import "config";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: $layout-background;
+  .card {
+    width: 75%;
+    display: flex;
+    background-color: $card-background;
+    border-radius: 0.5rem;
+
+    .card__left {
+      flex: 1;
+      padding: 4rem 3rem;
+      .highlight {
+        color: $accent;
+      }
+    }
+
+    &__title {
+      color: $white-text;
+      font-size: $font-size-large;
+      font-family: $font-stack-inter;
+      font-weight: 700;
+    }
+
+    &__desc {
+      color: $slightly-white-transparent-light;
+      font-size: $font-size-small;
+      font-family: $font-stack-inter;
+      font-weight: 400;
+      width: 80%;
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+
+    &__stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      margin-top: 3rem;
+      &Item {
+        &Number {
+          color: $slightly-white-transparent;
+          font-size: $font-size-medium;
+          font-family: $font-stack-inter;
+          font-weight: 700;
+        }
+
+        &Desc {
+          color: $slightly-white-transparent-light;
+          font-size: $font-size-small;
+          text-transform: uppercase;
+          font-family: $font-stack-lexend;
+          font-weight: 400;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+
+    .card__right {
+      flex: 1;
+      background: url("../images/image-header-desktop.jpg") $accent no-repeat;
+      background-blend-mode: multiply;
+      background-size: cover;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+  }
+}
+
+@import "mobile";

@@ -1,0 +1,68 @@
+@media (max-width: $mobile-width) {
+  .container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $layout-background;
+    .card {
+      width: 90%;
+      flex-direction: column-reverse;
+      background-color: $card-background;
+      border-radius: 0.5rem;
+      margin: 4.5rem 0;
+
+      .card__left {
+        flex: none;
+        padding: 2rem 1rem;
+      }
+
+      &__title {
+        font-size: $font-size-large-mobile;
+        text-align: center;
+      }
+
+      &__desc {
+        font-size: $font-size-small;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      &__stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 3rem;
+        :last-child {
+          margin-bottom: 0;
+        }
+        &Item {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 2rem;
+          &Number {
+            font-size: $font-size-medium;
+          }
+
+          &Desc {
+            font-size: $font-size-small;
+          }
+        }
+      }
+
+      .card__right {
+        flex: none;
+        background: url("../images/image-header-mobile.jpg") $accent no-repeat;
+        background-size: cover;
+        height: 225px;
+        width: 100%;
+        border-radius: 0;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+      }
+    }
+  }
+}
